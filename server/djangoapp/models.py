@@ -1,7 +1,6 @@
 # Uncomment the following imports before adding the Model code
 
 from django.db import models
-from django.utils.timezone import now
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
@@ -21,10 +20,11 @@ class CarMake(models.Model):
 
 # Car Model model
 class CarModel(models.Model):
-    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)  # Many-to-One relationship
-    dealer_id = models.IntegerField()  # Refers to a dealer in the Cloudant database
+    car_make = models.ForeignKey(
+        CarMake, on_delete=models.CASCADE)  # Many-to-One
+    dealer_id = models.IntegerField()  # Refers to Cloudant dealer
     name = models.CharField(max_length=100)
-    
+
     CAR_TYPES = [
         ('SEDAN', 'Sedan'),
         ('SUV', 'SUV'),
@@ -47,4 +47,4 @@ class CarModel(models.Model):
     mileage = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.car_make.name} {self.name}"  # Return the car make and model name
+        return f"{self.car_make.name} {self.name}"
