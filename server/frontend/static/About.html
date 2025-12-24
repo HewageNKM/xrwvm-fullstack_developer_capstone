@@ -1,7 +1,124 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <!-- Link the style sheet here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Best Cars Dealership</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .about-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
+    .about-header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .about-header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .team-section {
+      padding: 40px 20px;
+      background: #f8f9fa;
+    }
+    .team-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+    .team-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 10px;
+    }
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .team-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .team-card .card-body {
+      padding: 25px;
+      text-align: center;
+    }
+    .team-card .title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 5px;
+    }
+    .team-card .position {
+      color: #0f3460;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .team-card .card-text {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .team-card .email {
+      color: #0f3460;
+      font-weight: 500;
+    }
+    .mission-section {
+      background: white;
+      padding: 50px 40px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+    .mission-section h3 {
+      color: #1a1a2e;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .mission-section p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    .stats-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+      border-radius: 15px;
+      margin: 30px 0;
+    }
+    .stat-item {
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      display: block;
+    }
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+  </style>
 </head>
+<body>
 <div>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
     <div class="container-fluid">
@@ -25,44 +142,78 @@
     </div>
   </nav>
   
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
+  <div class="card" style="width: 80%; margin: auto; margin-top: 5%; border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+    <div class="about-header" name="about-header">
+      <h1>About Us</h1>
+      <p>Welcome to Best Cars Dealership, home to the best cars in North America. We deal in selling domestic and imported cars at reasonable prices. With over 25 years of experience, we've helped thousands of families find their perfect vehicle.</p>
     </div>
     
+    <div class="stats-section">
+      <div class="stat-item">
+        <span class="stat-number">25+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">50,000+</span>
+        <span class="stat-label">Happy Customers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Cars in Stock</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Locations Nationwide</span>
+      </div>
+    </div>
+
+    <div class="mission-section">
+      <h3>Our Mission</h3>
+      <p>At Best Cars Dealership, our mission is to provide an exceptional car buying experience that exceeds expectations. We believe in transparency, integrity, and building lasting relationships with our customers. Every vehicle in our inventory undergoes rigorous inspection to ensure quality and reliability.</p>
+      <h3 style="margin-top: 30px;">Why Choose Us?</h3>
+      <p>We offer competitive financing options, comprehensive warranty packages, and a hassle-free buying process. Our certified technicians ensure every car meets our high standards before it reaches you. Whether you're looking for a fuel-efficient sedan, a spacious SUV, or a powerful sports car, we have the perfect vehicle waiting for you.</p>
+    </div>
+    
+    <div class="team-section">
+      <h2>Meet Our Leadership Team</h2>
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+        <div class="team-card" style="width: 280px;">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="James Mitchell">
+          <div class="card-body">
+            <p class="title">James Mitchell</p>
+            <p class="position">Chief Executive Officer</p>
+            <p class="card-text">With 20+ years in the automotive industry, James leads our vision for customer-first service excellence.</p>
+            <p class="email">james.mitchell@bestcars.com</p>
+          </div>
+        </div>
+
+        <div class="team-card" style="width: 280px;">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Sarah Johnson">
+          <div class="card-body">
+            <p class="title">Sarah Johnson</p>
+            <p class="position">Director of Sales</p>
+            <p class="card-text">Sarah's expertise in customer relations has helped us achieve record satisfaction ratings year after year.</p>
+            <p class="email">sarah.johnson@bestcars.com</p>
+          </div>
+        </div>
+
+        <div class="team-card" style="width: 280px;">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" alt="Michael Chen">
+          <div class="card-body">
+            <p class="title">Michael Chen</p>
+            <p class="position">Head of Service</p>
+            <p class="card-text">Michael ensures every vehicle meets our rigorous quality standards before reaching our customers.</p>
+            <p class="email">michael.chen@bestcars.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="height: 50px;"></div>
 </div>
 
+</body>
 </html>
+</CodeContent>
+<parameter name="EmptyFile">false
